@@ -66,14 +66,14 @@ public void simpandata(){
                         sql = "UPDATE tbprogram SET namap='"+jTextField2.getText()+"', kterp='"+jTextPane1.getText()+"' WHERE kodep='"+jTextField1.getText()+"'";
                         java.sql.PreparedStatement stat=con.prepareStatement(sql);
                         stat.execute();
-                        JOptionPane.showMessageDialog(null, "Ubah Data Berhasil");
+//                        JOptionPane.showMessageDialog(null, "Ubah Data Berhasil");
                         awal();
                     } else if (tambahToggle.isSelected()) {
                         // Operasi INSERT
                         sql ="INSERT INTO tbprogram (kodep,namap,kterp)VALUES ('"+jTextField1.getText()+"','"+jTextField2.getText()+"','"+jTextPane1.getText()+"')";
                         java.sql.PreparedStatement stat=con.prepareStatement(sql);
                         stat.execute();
-                        JOptionPane.showMessageDialog(null, "Simpan Data Berhasil");
+//                        JOptionPane.showMessageDialog(null, "Simpan Data Berhasil");
                         awal();
                     }
                 } catch (Exception ex) {
@@ -378,7 +378,7 @@ private void load_program(){
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        if(jTextField1.getText().equals("")){
+        if(jTextField2.getText().equals("")){
     JOptionPane.showMessageDialog(null, "nama tidak boleh kosong");
         }else{
         int pilih = JOptionPane.showConfirmDialog(null,"Apakah Data Sudah Benar?"+"Simpan?","Simpan Data",JOptionPane.YES_NO_OPTION);
